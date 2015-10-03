@@ -8,9 +8,7 @@
 </head>
 <body>
 <div class="container">
-<div class="jumbotron">
-<h1>选择您想要的时间，然后点击提交<br></h1>
-</div>
+<h4 class='jumbotron'>选择您想要的时间，然后点击提交<br></h4>
 </div>
 <div class="container">
     <form role="form" id="timecheck" action="/after_join.php" method="post">
@@ -32,14 +30,13 @@
 	    while ($row=mysqli_fetch_array($result))
 	    {
 		echo '<div class="form-group">';
-		echo "<label><div class='jumbotron col-lg-12 col-md-12 col-sm-12 col-xs-12'><input type ='checkbox' name=",$row["time_id"]," value=",$row["time_id"],">";
+		echo "<label class='form-control input-lg-12 col-lg-12'><input type ='checkbox' name=",$row["time_id"]," value=",$row["time_id"],">";
 		echo $row["time"];
-		echo "</div></label>\n";
-		echo "</div>";
+		echo "</label>\n";
+		echo "</div>\n";
 	    }
-	echo "</div>\n"
 ?>
-    <div class=jumbotron><input type="submit" value="提交" name="submit"></div>
+    <div class='form-group'><input class='btn btn-lg' type="submit" value="提交" name="submit"></div>
     </form>
 </div>
 
